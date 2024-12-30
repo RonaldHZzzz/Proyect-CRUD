@@ -16,6 +16,11 @@ def index(request):
     })
 
 def login(request):
+    if request.method== 'POST':
+        USERNAME = request.POST.get('username')
+        PASSWORD = request.POST.get('password')
+        print(USERNAME)
+        print(PASSWORD)
     return render(request,"users/login.html",{
-            
+
     })
